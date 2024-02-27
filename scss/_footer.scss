@@ -1,0 +1,53 @@
+/* -------------- Hero Section --------------- */
+.footer_section {
+  background: #313965;
+  padding: 12rem 0;
+}
+
+.footer_logo {
+  display: inline-block;
+  width: 17.3rem;
+}
+
+.footer_section .title {
+  font-family: var(--font-roboto);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0em;
+  color: #bfbfbf;
+  padding-bottom: 1.5rem;
+}
+
+.footer_section ul li:not(:last-child) {
+  padding-bottom: 0.8rem;
+}
+
+.footer_section ul li a {
+  font-family: var(--font-roboto);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.444;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.footer_section ul li a:hover {
+  color: #ff9c28;
+}
+
+@media #{$xs} {
+  .footer_section {
+    padding: 6.4rem 0;
+    .title {
+      font-size: 1.4rem;
+    }
+    ul {
+      li {
+        a {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}

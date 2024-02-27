@@ -1,0 +1,396 @@
+/* ================ Blog Page Two ================= */
+.stb_inner {
+  background: #f7f7f7;
+}
+.stb_bottom {
+  padding: 4rem 0;
+  width: 100%;
+  background: #313965;
+}
+.table_area {
+  border: 0.1rem solid #363f48;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 74rem;
+  &.table_area_one {
+    grid-template-columns: 0fr 1fr;
+  }
+  .table_sticky {
+    border-right: 0.1rem solid #363f48;
+    padding-bottom: 1.8rem;
+    table {
+      width: 16.3rem;
+    }
+  }
+  .table_scrollable {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 0.4rem;
+    &::-webkit-scrollbar {
+      height: 0.8rem !important;
+      border-bottom: 0.2rem solid transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #c5c5c5;
+      border-radius: 10rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    th {
+      border-right: 0.5rem solid #fff;
+      &.col1 {
+        border-left: 0.5rem solid #fff;
+      }
+    }
+    .col1,
+    .col2 {
+      padding-right: 3.5rem;
+    }
+    .col3,
+    .col4 {
+      padding-right: 0.8rem;
+    }
+    .col5 {
+      padding-right: 1.2rem;
+    }
+    .col6 {
+      padding-right: 3rem;
+    }
+    .col7 {
+      padding-right: 1rem;
+    }
+    .col8 {
+      padding-right: 0.8rem;
+    }
+    .col9 {
+      padding-right: 1.2rem;
+    }
+    .col10 {
+      padding-right: 0.8rem;
+    }
+    td ul {
+      padding-left: 2.5rem;
+    }
+    .col11 {
+      padding-right: 4.5rem;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background: #f7f7f7;
+      }
+    }
+    td {
+      height: 9.4rem;
+      padding-left: 0.8rem;
+    }
+    tr {
+      white-space: nowrap;
+    }
+    th {
+      height: 4.9rem;
+      padding-left: 0.8rem;
+    }
+  }
+}
+
+// table_area_two
+.table_area_two {
+  .table_scrollable {
+    margin-bottom: 0;
+  }
+  table {
+    tr {
+      width: 100%;
+    }
+    .col1 {
+      width: 37rem;
+      border-left: 0.1rem solid #fff !important;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .col2 {
+      width: 37rem;
+      border-right: 0.1rem solid #fff;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    td {
+      height: 4.6rem;
+    }
+    th {
+      height: 4.9rem;
+    }
+  }
+}
+
+// Accordian
+.accordion {
+  .accordion-item {
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 3.2rem;
+    padding-top: 1.6rem;
+    .ac_button {
+      border: none;
+      outline: none;
+      text-align: left;
+      background: none;
+      padding-left: 0;
+      width: 100%;
+      &:focus {
+        border: none;
+        outline: none;
+        background: none;
+      }
+      &:not(.collapsed) {
+        border: none;
+        outline: none;
+        background: none;
+        box-shadow: none;
+        color: currentColor;
+      }
+      &:after {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      &:not(.collapsed) {
+        .ac_arrow {
+          transform: rotate(0deg);
+          transition: 0.3s;
+        }
+      }
+      &.collapsed {
+        .ac_arrow {
+          transform: rotate(180deg);
+          transition: 0.3s;
+        }
+      }
+    }
+    .accordion-body {
+      padding: 0;
+      padding-top: 3.2rem;
+    }
+  }
+}
+
+// ================ Comment Section ================== //
+.comments {
+  width: 98.3rem;
+  padding: 6.5rem 12rem 6.5rem 12rem;
+  background: #f7f7f7;
+  margin: 0 auto;
+  &.mt_40 {
+    margin-top: 4rem;
+  }
+  .comment_box {
+    .comment_icon {
+      background: #ff8a00;
+      height: 5rem;
+      display: flex;
+      width: 5rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10rem;
+      font-size: 3.1rem;
+      color: #fff;
+    }
+    &.reply_box {
+      .comment_icon {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.4rem;
+        line-height: 125%;
+      }
+    }
+    .comment_top {
+      border: 0.1rem solid #dbe6f1;
+      border-radius: 0.8rem;
+      a {
+        line-height: 160%;
+        color: #1b2769;
+      }
+      p {
+        color: #526373;
+        line-height: 160%;
+      }
+      .comment_icon {
+        background: #ff8a00;
+        height: 5.1rem;
+        display: flex;
+        width: 5.1rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rem;
+        font-size: 3.1rem;
+        color: #fff;
+      }
+    }
+    .comment_cap {
+      p {
+        color: #9c9c9c;
+      }
+      .reply {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .see_more_replies {
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      &.hide {
+        display: none !important;
+      }
+    }
+    .comment_main {
+      width: 100%;
+    }
+    &.reply_on {
+      .see_more_replies {
+        display: none !important;
+      }
+      & > .comment_main {
+        & > .comment_cont {
+          position: relative;
+          &:before {
+            content: "";
+            background: #c0c8d7;
+            left: -4rem;
+            position: absolute;
+            top: 6rem;
+            height: calc(100% - 6rem);
+            width: 1px;
+            opacity: 1;
+          }
+        }
+      }
+      &.reply_line_one {
+        & > .comment_main {
+          & > .comment_cont {
+            &:before {
+              left: -9.5rem;
+              top: 0;
+              height: calc(100%);
+            }
+          }
+        }
+      }
+    }
+    &.reply_inner {
+      &.reply_box {
+        & > .comment_main {
+          & > .comment_cont {
+            &:before {
+              left: -3.5rem;
+              top: 5rem;
+              height: calc(100% - 4rem);
+            }
+          }
+        }
+        &.reply_line_one {
+          &.reply_box {
+            &:before {
+              width: 3rem !important;
+              left: -3.5rem !important;
+            }
+            & > .comment_main {
+              & > .comment_cont {
+                &:before {
+                  left: -9rem !important;
+                  height: calc(100%);
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .reply_box {
+    position: relative;
+    display: none !important;
+    &.active {
+      display: flex !important;
+    }
+    &:before {
+      content: "";
+      height: 4.5rem;
+      width: 3.4rem;
+      position: absolute;
+      left: -4rem;
+      top: 0;
+      border-left: 0.1rem solid #c0c8d7;
+      border-bottom: 0.1rem solid #c0c8d7;
+      border-bottom-left-radius: 0.9rem;
+    }
+  }
+}
+
+// ================ Comment Form ================== //
+.comment_form {
+  .form_group {
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 0.4rem;
+      border: 0.1rem solid #dbe6f1;
+      outline: none;
+    }
+    textarea {
+      height: 15.3rem;
+      &::placeholder {
+        color: #686868;
+      }
+    }
+    input {
+      &::placeholder {
+        color: #686868;
+      }
+    }
+    label {
+      color: #686868;
+      -webkit-transform: translateY(4.2rem) translateX(2rem);
+      transform: translateY(1.7rem) translateX(2rem);
+      pointer-events: none;
+      position: absolute;
+      .hide {
+        display: none;
+      }
+    }
+  }
+  .button {
+    outline: none;
+    border: none;
+  }
+}
+.comment_box_serial_2:last-child .comment_cont:before {
+  display: none;
+}
+.form_comment_box.reply_box.active {
+  display: none !important;
+  &.show {
+    display: flex !important;
+  }
+}
+.more {
+  display: none;
+  .show {
+    display: block;
+  }
+}
+
+.load_more {
+  cursor: pointer;
+  img {
+    padding-left: 1.5rem;
+  }
+}

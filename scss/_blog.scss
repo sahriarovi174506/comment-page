@@ -1,0 +1,122 @@
+/* =============== Inner Page One hero ================= */
+.hero_inner {
+  background: #313965;
+  .title_sm {
+    font-family: var(--font-roboto);
+    line-height: 160%;
+    color: rgb(255, 255, 255, 0.8);
+  }
+  .hero_img {
+    display: block;
+    width: 44rem;
+    margin-left: auto;
+  }
+}
+
+/* ========== TimeLine Section ========== */
+.Timeline_section {
+  .timeline_cont {
+    gap: 9.5rem;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    .sticky_bar {
+      position: sticky;
+      top: 10rem;
+      width: 26rem;
+      .page_navs {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        .page_nav_list {
+          padding-left: 2rem;
+          &:hover {
+            color: #363f48;
+            cursor: auto;
+          }
+        }
+        .page_nav {
+          padding-left: 1.5rem;
+          border-left: 0.3rem solid transparent;
+          transition: 0.2s;
+
+          &:hover,
+          &.active {
+            color: #1b2769;
+            border-left: 0.3rem solid #ff8a00;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .timeline_textbox {
+      .title_mxl {
+        color: #1b2769;
+      }
+      .p,
+      li,
+      .text_sm {
+        color: #363f48;
+      }
+      ul {
+        list-style: disc;
+      }
+    }
+  }
+  @media #{$xs} {
+    padding: 4rem 0;
+  }
+}
+
+/* =========== Blog Section ============ */
+.blogs_section {
+  background: #fafafb;
+  padding: 9.5rem 0 0;
+  .blog_slider {
+    &.owl-nav.disabled {
+      display: none;
+    }
+    .blog_box {
+      box-shadow: var(--shadow);
+      border-radius: 0.8rem;
+      height: fit-content;
+    }
+    .blog_text {
+      .title_md {
+        font-size: 2.3rem;
+        line-height: 135%;
+        font-family: var(--font-roboto);
+        font-weight: 500;
+        letter-spacing: 0;
+        color: #1b2769;
+        &:hover {
+          color: var(--blue);
+        }
+      }
+      p {
+        color: #5a5c60;
+      }
+    }
+    .owl-nav {
+      display: none;
+    }
+    .slick-track {
+      display: flex;
+      gap: 3rem;
+      overflow: hidden;
+      padding: 6.5rem 0 9.5rem;
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 5rem;
+    .blog_slider {
+      padding: 4rem 0 6rem;
+      .blog_text {
+        padding: 3rem 1.5rem;
+        p {
+          padding-bottom: 0.8rem;
+        }
+      }
+    }
+  }
+}
